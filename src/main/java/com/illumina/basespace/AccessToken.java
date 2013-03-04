@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author bking
  *
  */
-class AccessToken
+public class AccessToken
 {
     @JsonProperty("access_token")
     private String accessToken;

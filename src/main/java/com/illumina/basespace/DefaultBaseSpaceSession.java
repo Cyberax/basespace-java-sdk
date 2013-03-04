@@ -68,7 +68,7 @@ import com.sun.jersey.core.util.MultivaluedMapImpl;
   * @author kyokum
  */
 @SuppressWarnings({ "unchecked", "rawtypes" })
-class DefaultBaseSpaceSession implements BaseSpaceSession
+public class DefaultBaseSpaceSession implements BaseSpaceSession
 {
     private final Logger logger = Logger.getLogger(DefaultBaseSpaceSession.class.getPackage().getName());
     private final ObjectMapper mapper = new ObjectMapper();
@@ -86,7 +86,7 @@ class DefaultBaseSpaceSession implements BaseSpaceSession
      * Create a BaseSpace session
      * @param config the configuration to use to establish the session
      */
-    DefaultBaseSpaceSession(BaseSpaceConfiguration configuration, String accessToken)
+    public DefaultBaseSpaceSession(BaseSpaceConfiguration configuration, String accessToken)
     {
         this.configuration = configuration;
         this.accessToken = accessToken;
