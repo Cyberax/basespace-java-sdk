@@ -35,17 +35,17 @@ public abstract class BaseSpaceEntity implements Serializable
     protected final static Logger logger = Logger.getLogger(BaseSpaceEntity.class.getPackage().getName());
 
     @JsonProperty("Id")
-    private Long Id;
+    private String Id;
     
     /**
      * Get the unique id associated with this entity
      * @return the id
      */
-    public Long getId()
+    public String getId()
     {
         return Id;
     }
-    protected void setId(Long id)
+    protected void setId(String id)
     {
         Id = id;
     }

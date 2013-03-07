@@ -259,4 +259,8 @@ public interface BaseSpaceSession
      */
     public CoverageMetaData getCoverageMetaData(ExtendedFileInfo file,String chromosome);
     
+	/**
+		@return Access token
+	*/
+	public String getToken();
 }

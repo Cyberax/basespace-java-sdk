@@ -79,7 +79,7 @@ public class DefaultBaseSpaceSession implements BaseSpaceSession
     private static final String UNAUTHORIZED = "Unauthorized";
     private List<DownloadListener>downloadListeners;
     private BaseSpaceConfiguration configuration; 
-    private Map<Long,FileMetaData>fileToUriMap = new HashMap<Long,FileMetaData>();
+    private Map<String,FileMetaData>fileToUriMap = new HashMap<String,FileMetaData>();
 
 
     /**
@@ -105,6 +105,12 @@ public class DefaultBaseSpaceSession implements BaseSpaceSession
 
         logger.setLevel(Level.WARNING);
     }
+
+	@Override
+	public String getToken()
+	{
+		return accessToken;
+	}
 
     @Override
     public User getCurrentUser()
